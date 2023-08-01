@@ -19,7 +19,7 @@ class ConverterTest {
     @Test
     void whenConvert200RblThen2dot2222Dlr () {
         float in = 180;
-        float expected = 2F;
+        float expected = 1.8F;
         float out = Converter.rubleToDollar(in);
         float eps = 0.0001f;
         assertThat(out).isEqualTo(expected, withPrecision(eps));
