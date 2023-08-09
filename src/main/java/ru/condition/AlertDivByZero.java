@@ -7,7 +7,7 @@ public class AlertDivByZero {
             System.out.println("Could not div by 0.");
         }
         if (number < 0) {
-            System.out.println("Number is less than 0");
+            System.out.println("The Number is less than 0");
         }
     }
 
