@@ -7,30 +7,30 @@ import org.junit.jupiter.api.Test;
 class MaxTest {
 
     @Test
-    void When3To4Then4() {
-        int left = 3;
-        int right = 4;
-        int result = Max.max(left, right);
-        int expected = 3;
+    void When10To8Then10MoreThan8() {
+        int left = 10;
+        int right = 8;
+        String result = Max.max(left, right);
+        String expected = "Left > right";
         assertThat(result).isEqualTo(expected);
 
     }
     @Test
-    void When4To4Then4t() {
-        int left = 3;
-        int right = 3;
-        int result = Max.max(left, right);
-        int expected = 3;
+    void When60To100Then100MoreThan60() {
+        int left = 60;
+        int right = 100;
+        String result = Max.max(left, right);
+        String expected = "Right > Left";
         assertThat(result).isEqualTo(expected);
 
     }
 
     @Test
-    void When4To3Then3() {
-        int left = 4;
-        int right = 3;
-        int result = Max.max(left, right);
-        int expected = 4;
+    void When2To2ThenEqual() {
+        int left = 2;
+        int right = 2;
+        String result = "Left = Right";
+        String expected = "Left = Right";
         assertThat(result).isEqualTo(expected);
 
     }
