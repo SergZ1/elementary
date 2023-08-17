@@ -8,19 +8,13 @@ public class ChessBoard {
                 && isValid(y1) && isValid(y2)) {
             if (Math.abs(x1 - x2) == Math.abs(y1 - y2)) {
                 rsl = Math.abs(x2 - x1);
-                rsl = rsl == 0 ? Math.abs(y2 - y1) : rsl;
             }
         }
         return rsl;
     }
 
     private static boolean isValid(int coordinate) {
+
         return coordinate >= 0 && coordinate <= 7;
-    }
-
-    public static void main(String[] args) {
-        int result = ChessBoard.way(6, 7, 1, 2);
-        System.out.println(result);
-
     }
 }
