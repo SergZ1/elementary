@@ -19,19 +19,20 @@ public class SwitchWeek {
             case 5:
                 name = "Пятница";
                 break;
-            default:
             case 6:
                 name = "Суббота";
                 break;
             case 7:
                 name = "Воскресенье";
                 break;
+            default:
+                name = "Такого дня недели не существует";
         }
         return name;
     }
 
     public static void main(String[] args) {
-        String result = SwitchWeek.nameOfDay(2);
+        String result = SwitchWeek.nameOfDay(9);
         System.out.println(result);
 
     }
