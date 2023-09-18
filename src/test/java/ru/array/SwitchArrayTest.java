@@ -26,11 +26,7 @@ class SwitchArrayTest {
     }
 
     @Test
-<<<<<<< HEAD
     void whenSwap4to8() {
-=======
-    void whenSwap3to8() {
->>>>>>> origin/master
         int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int source = 4;
         int dest = input.length - 2;
