@@ -1,65 +1,55 @@
 package ru.condition;
 
-import  static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 class PointTest {
 
     @Test
-        void when00To20Then2() {
-            double expected = 2;
-            int x1 = 0;
-            int y1 = 0;
-            int x2 = 2;
-            int y2 = 0;
-            double out = Point.distance(x1, y1, x2, y2);
-            assertThat(out).isEqualTo(expected, withPrecision(0.01));
-        }
-@Test
-    void when02To02Then0 () {
+    void when00To20Then2() {
+        Point a = new Point(0,0);
+        Point b = new Point(2,0);
+        double result = a.distance(b);
+        double expected = 2.0;
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when02To02Then0() {
+        Point a = new Point(0,2);
+        Point b = new Point(0,2);
+        double result = a.distance(b);
+        double expected = 0.0;
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when00To22Then2Dot8() {
+        Point a = new Point(0,0);
+        Point b = new Point(2,2);
+        double result = a.distance(b);
+        double expected = 2.8284271247461903;
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when22To22Then0() {
+        Point a = new Point(2,2);
+        Point b = new Point(2,2);
+        double result = a.distance(b);
         double expected = 0;
-        int x1 = 0;
-        int y1 = 2;
-        int x2 = 0;
-        int y2 = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
-@Test
-    void when00To22Then2Dot8 () {
+
+    @Test
+    void when02To00Then2() {
+        Point a = new Point(0,2);
+        Point b = new Point(0,0);
+        double result = a.distance(b);
         double expected = 2;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
-@Test
-    void when22To22Then0 () {
-        double expected = 0;
-        int x1 = 2;
-        int y1 = 2;
-        int x2 = 2;
-        int y2 = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
-    }
-@Test
-    void when02To00Then2 () {
-        double expected = 2;
-        int x1 = 0;
-        int y1 = 2;
-        int x2 = 0;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
-    }
-
-
-
-
 
 
 }
