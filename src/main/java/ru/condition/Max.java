@@ -8,16 +8,16 @@ public class Max {
 
     public static int max(int left, int right, int third) {
         int result;
-        result = left > right ? left : right;
-        result = result > third ? result : third;
+        result = max(left, right);
+        result = max(result, third);
         return result;
     }
 
     public static int max(int left, int right, int third, int fourth) {
         int result;
-        result = left > right ? left : right;
-        result = result > third ? result : third;
-        result = result > fourth ? result : fourth;
+        result = max(left, right);
+        result = max(result, third);
+        result = max(result, fourth);
         return result;
     }
 
